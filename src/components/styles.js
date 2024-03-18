@@ -88,14 +88,14 @@ export const styles = StyleSheet.create({
         padding: 10,   
     },
     buttonEntry: {
-        top: 530,
+        top: 520,
         width: 100,
         height: 280,
         left: 200,
         position: 'absolute',
     },
     buttonInsert: {
-        top: 530,
+        top: 520,
         width: 100,
         height: 280,
         left: 60,
@@ -116,6 +116,7 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
         width: win.width,
         height: 80,
+        
     },
     homeIcon: {
         position: 'absolute',

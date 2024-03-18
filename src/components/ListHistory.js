@@ -14,7 +14,7 @@ const ListHistory = ({navigation}) => {
         
         <View style = { styles.container }>
             <View style={styles.upperbar} >
-                <Image source={require('../../icons/upperBar.png')}/>
+                {/* <Image source={require('../../icons/upperBar.png')}/> */}
             </View>
 
             {/* <View style={styles.homeIcon}>
@@ -43,7 +43,25 @@ const ListHistory = ({navigation}) => {
                 <Image source={require('../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
             
-
+            <View style={{color: 'white',
+                          width: 350,
+                          height: 600,
+                          alignSelf: 'center',
+                          position: 'absolute',
+                          top: 120,
+                          alignItems: 'center',
+                          fontSize: 50,
+                          backgroundColor: 'white',
+                          borderTopLeftRadius: 30,
+                          borderTopRightRadius: 30}} >
+                <Text style={{fontSize: 45}}>
+                    Histórico
+                </Text>
+                <View style={{width: 300,
+                                height: 2,
+                                backgroundColor: 'black'}}>
+                </View>
+            </View>
 
         
         </View>

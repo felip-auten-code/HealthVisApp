@@ -8,21 +8,21 @@ import { styles } from './styles';
 //import { TextInput } from 'react-native-paper';
 //import styles from './styles'
 
-const MainPage = ({navigation}) => {
+const ListDiseases = ({navigation}) => {
     return(
         <View style = { styles.container }>
             <View style={styles.upperbar} >
-                {/* <Image source={require('../../icons/upperBar.png')}/> */}
+                
             </View>
 
             {/* Home Icon */}
-            <TouchableOpacity   onPress={ () => Alert.alert('Go to home')}
-                                style={styles.homeIcon}>
+            <TouchableOpacity onPress={ () => navigation.navigate('MainPage')}
+            style={styles.homeIcon}>
                 <Image source={require('../../icons/homeIcon.png')}/>
             </TouchableOpacity>
 
             <Image  style = {styles.icon3}   
-                    source = {require("../../icons/LeafLogIn.png")}>           
+                    source = {require("../../icons/LeafLogIn.png")}>        
             </Image>
 
             {/* User Information */}
@@ -37,23 +37,25 @@ const MainPage = ({navigation}) => {
                 <Image source={require('../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
             
-            {/* Botao Ver Camera */}
-            <TouchableOpacity onPress={ () => navigation.navigate('TakePhoto01')} 
-            style={styles.photoIcon}>
-                <Image source={require('../../icons/PhotoIcon.png')}/>
-            </TouchableOpacity>
 
-            {/* List History */}
-            <TouchableOpacity onPress={ () => navigation.navigate('ListHistory')} 
-            style={styles.ListIcon}>
-                <Image source={require('../../icons/ListIcon.png')}/>
-            </TouchableOpacity>
+            <View style={{color: 'white',
+                          width: 350,
+                          height: 600,
+                          alignSelf: 'center',
+                          position: 'absolute',
+                          top: 120,
+                          alignItems: 'center',
+                          fontSize: 50,
+                          backgroundColor: 'white',
+                          borderTopLeftRadius: 30,
+                          borderTopRightRadius: 30}} >
 
-            {/* List Diseases */}
-            <TouchableOpacity onPress={ () => navigation.navigate('ListDiseases')} 
-            style={styles.DoencaIcon}>
-                <Image source={require('../../icons/DoencaIcon.png')}/>
-            </TouchableOpacity>
+                <View style={{  width: 300,
+                                height: 2,
+                                backgroundColor: 'black',
+                                top: 70}}>
+                </View>
+            </View>
 
         
         </View>
@@ -61,5 +63,4 @@ const MainPage = ({navigation}) => {
     )
 }
 
-
-export default MainPage
+export default ListDiseases
