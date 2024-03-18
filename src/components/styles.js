@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
     scrollview: {
         marginHorizontal: 20,
         top: 200,
-        position: "absolute"
+        position: "absolute",
     },
     TitleText: {
         flex: 1,
@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
         position: "absolute",
         resizeMode: 'center',
         width: 620,
-        height: 620
+        height: 620,
     },
     icon3: {
         alignSelf: 'center',
@@ -55,7 +55,7 @@ export const styles = StyleSheet.create({
         position: "absolute",
         resizeMode: 'center',
         width: 420,
-        height: 420
+        height: 420,
     },
     input: {
         top: 20,
@@ -157,7 +157,5 @@ export const styles = StyleSheet.create({
         paddingTop: 20,
         borderEndColor: '#16441D',
         borderRadius: 100,
-        
-        
     }
 })

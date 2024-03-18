@@ -11,10 +11,8 @@ import { styles } from './styles';
 const Hub = ({navigation}) => {
     
     return(
-        
         <View style = { styles.container }>
             <View style={styles.upperbar} >
-                <Image source={require('../../icons/upperBar.png')}/>
             </View>
 
             {/* <View style={styles.homeIcon}>

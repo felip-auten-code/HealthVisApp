@@ -17,7 +17,7 @@ const LogIn = ({navigation}) => {
         <KeyboardAvoidingView 
         behavior= 'padding'
         style={styles.container}
-        keyboardVerticalOffset={100}>
+        keyboardVerticalOffset={50}>
             <View style={ [styles.container]}>
                 <StatusBar style = "auto" />
                 
@@ -25,7 +25,6 @@ const LogIn = ({navigation}) => {
                         source = {require("../../icons/LeafLogIn.png")}>
                             
                 </Image>
-
 
                 <View style = {styles.TitleText}>
                     <Text style = {styles.TitleText}>
@@ -37,7 +36,7 @@ const LogIn = ({navigation}) => {
                             
                 </Image>
             
-                <View keyboardVerticalOffset={180} vertical style={{flex: 1, position: 'absolute', alignItems: 'center'}}>
+                <View keyboardVerticalOffset={80} vertical style={{flex: 1, position: 'absolute', alignItems: 'center'}}>
                     <TextInput  style = { styles.input }
                                 onChangeText = {onChangeText}
                                 value = {text}
@@ -50,7 +49,6 @@ const LogIn = ({navigation}) => {
                                 placeholder = "Password"    
                                 secureTextEntry = {true}   
                                 textContentType = {"password"}  
-                                
                     ></TextInput>
                 </View>
 
@@ -60,12 +58,14 @@ const LogIn = ({navigation}) => {
                         onPress={() => navigation.navigate('MainPage')}
                     />
                 </View>
+
                 <View style={styles.buttonInsert}>
                     <Button 
                         title="Cadastrar"
                         onPress={() => Alert.alert('Fazer Tela de Cadastro')}
                     />
                 </View>
+
                 <View   style={{position: 'absolute',
                         textAlign: 'center',
                         justifyContent: "center",
@@ -76,11 +76,8 @@ const LogIn = ({navigation}) => {
                         justifyContent: "center",
                         color: 'white'
                         }}>Ou entre por meio de {"\n"} outra plataforma</Text>
-                    
                 </View>
-
            </View>
-                
         </KeyboardAvoidingView>
 
     )

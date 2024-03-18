@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { TouchableOpacity, SafeAreaView , ScrollView,  Keyboard, TouchableWithoutFeedback, Platform, StyleSheet, Text, View , Image, Dimensions, TextInput , KeyboardAvoidingView, Alert} from 'react-native';
-import React, { Children } from 'react'
+import { PopupMenu, TouchableOpacity, SafeAreaView , ScrollView,  Keyboard, TouchableWithoutFeedback, Platform, StyleSheet, Text, View , Image, Dimensions, TextInput , KeyboardAvoidingView, Alert, Modal} from 'react-native';
+import React, { Children , useState } from 'react'
 //import { Box, Button, Input } from 'native-base'
 import { styles } from './styles';
 
@@ -9,6 +9,9 @@ import { styles } from './styles';
 //import styles from './styles'
 
 const MainPage = ({navigation}) => {
+    const [visible, setVisible] = useState(false)
+    const options = []
+    const win = Dimensions.get('window')
     return(
         <View style = { styles.container }>
             <View style={styles.upperbar} >
@@ -32,7 +35,7 @@ const MainPage = ({navigation}) => {
             </TouchableOpacity>
 
             {/* Options */}
-            <TouchableOpacity onPress={ () => Alert.alert('See Options')} 
+            <TouchableOpacity onPress={ () => setVisible(true)} 
             style={styles.optIcon}>
                 <Image source={require('../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
@@ -56,7 +59,17 @@ const MainPage = ({navigation}) => {
             </TouchableOpacity>
 
         
+            <Modal  transparent={true} visible={visible} animationType="slide" >
+                <SafeAreaView style={{flex: 1}}  onTouchStart={() => setVisible(false)}>
+                    <View style={{backgroundColor: 'white', top: 10, height:200, alignSelf:'center', width: win.width, alignItems: 'center'}}>
+                        <Text>
+                            HELLO
+                        </Text>
+                    </View>
+                </SafeAreaView>
+            </Modal>
         </View>
+        
         
     )
 }
