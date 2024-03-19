@@ -131,7 +131,7 @@ export const styles = StyleSheet.create({
     optIcon: {
         position: 'absolute',
         top: 25,
-        left: 330,
+        left: win.width - 45,
     },
     optIcon2:{
         resizeMode: 'contain',
@@ -141,22 +141,23 @@ export const styles = StyleSheet.create({
     photoIcon: {
         position: 'absolute',
         top: 180,
-        left: 30,
+        left: win.width/5 -126.4/2,
     },
     ListIcon: {
         position: 'absolute',
         top: 180 + 20,
-        left: 210,
+        left: 4*win.width/6 -126.4/2,
+        
     },
     DoencaIcon: {
         position: 'absolute',
         top: 180 + 20 + 180,
-        left: 210,
+        left: 4*win.width/6 -126.4/2,
     },
     textPhoto1: {
         alignSelf: 'center',
         top: 120,
-        position: 'absolute'
+        position: 'absolute',
     },
     selecPlant: {
         position: 'absolute',

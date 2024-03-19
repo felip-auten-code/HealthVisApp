@@ -8,13 +8,10 @@ import { styles } from './styles';
 //import { TextInput } from 'react-native-paper';
 //import styles from './styles'
 
-const ListHistory = ({navigation}) => {
-    
+const TakePhoto03 = ({navigation}) => {    
     return(
-        
         <View style = { styles.container }>
             <View style={styles.upperbar} >
-                {/* <Image source={require('../../icons/upperBar.png')}/> */}
             </View>
 
             {/* <View style={styles.homeIcon}>
@@ -42,33 +39,9 @@ const ListHistory = ({navigation}) => {
             style={styles.optIcon}>
                 <Image style={styles.optIcon2} source={require('../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
-            
-
-            <ScrollView style={{color: 'white',
-                          width: 350,
-                          height: 600,
-                          alignSelf: 'center',
-                          position: 'absolute',
-                          top: 120,
-                          //alignItems: 'center',
-                          backgroundColor: 'white',
-                          borderTopLeftRadius: 30,
-                          borderTopRightRadius: 30}} >
-                <Text style={{fontSize: 45, alignSelf: 'center'}}>
-                    Histórico
-                </Text>
-
-                <View style={{  width: 300,
-                                height: 1,
-                                backgroundColor: 'black',
-                                alignSelf: 'center'}}>
-                </View>
-            </ScrollView>
-
-        
         </View>
         
     )
 }
 
-export default ListHistory
+export default TakePhoto03

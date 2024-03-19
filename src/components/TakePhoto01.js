@@ -33,7 +33,6 @@ const TakePhoto01 = ({navigation}) => {
                 <Image style={styles.homeIcon2} source={require('../../icons/homeIcon.png')}/>
             </TouchableOpacity>
 
-            
 
             {/* User Information */}
             <TouchableOpacity onPress={ () => Alert.alert('See user information')} 
