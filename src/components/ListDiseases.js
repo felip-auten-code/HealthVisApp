@@ -37,25 +37,28 @@ const ListDiseases = ({navigation}) => {
                 <Image style={styles.optIcon2} source={require('../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
             
-
-            <View style={{color: 'white',
+            {/* View the list of registered plant cultures */}
+            <ScrollView   style={{color: 'white',
                           width: 350,
                           height: 600,
                           alignSelf: 'center',
                           position: 'absolute',
                           top: 120,
-                          alignItems: 'center',
                           fontSize: 50,
                           backgroundColor: 'white',
                           borderTopLeftRadius: 30,
                           borderTopRightRadius: 30}} >
 
+                <Text style={{fontSize: 40, alignSelf: 'center'}}>
+                    Qual a cultura?
+                </Text>
                 <View style={{  width: 300,
-                                height: 2,
+                                height: 1,
                                 backgroundColor: 'black',
-                                top: 70}}>
+                                alignSelf: 'center',
+                                marginTop: 5}}>
                 </View>
-            </View>
+            </ScrollView>
 
         
         </View>

@@ -13,7 +13,7 @@ const MainPage = ({navigation}) => {
     const options = []
     const win = Dimensions.get('window')
     return(
-        <View style = { styles.container }>
+        <SafeAreaView style = { styles.container }>
             <View style={styles.upperbar} >
                 {/* <Image source={require('../../icons/upperBar.png')}/> */}
             </View>
@@ -60,15 +60,16 @@ const MainPage = ({navigation}) => {
 
         
             <Modal  transparent={true} visible={visible} animationType="slide" >
-                <SafeAreaView style={{flex: 1}}  onTouchStart={() => setVisible(false)}>
-                    <View style={{backgroundColor: 'white', top: 10, height:200, alignSelf:'center', width: win.width, alignItems: 'center'}}>
-                        <Text onPress={() => navigation.navigate('ListHistory')}>
+                <SafeAreaView style={{}}  onTouchStart={() => setVisible(false)}>
+                    <View style={{backgroundColor: 'black', top: 10, height:200, alignSelf:'center', width: win.width, alignItems: 'center'}}>
+                        <Text   onPress={() => navigation.navigate('ListHistory')}
+                                style ={{color: 'white'}}>
                             HELLO
                         </Text>
                     </View>
                 </SafeAreaView>
             </Modal>
-        </View>
+        </SafeAreaView>
         
         
     )

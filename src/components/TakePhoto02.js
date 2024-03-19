@@ -3,6 +3,7 @@ import { TouchableOpacity, SafeAreaView , ScrollView,  Keyboard, TouchableWithou
 import React, { Children } from 'react'
 //import { Box, Button, Input } from 'native-base'
 import { styles } from './styles';
+import * as ImagePicker from "expo-image-picker"
 
 //import { Form } from 'react-native-bootstrap/Form'
 //import { TextInput } from 'react-native-paper';

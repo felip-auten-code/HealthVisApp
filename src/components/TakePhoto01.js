@@ -10,7 +10,7 @@ import { styles } from './styles';
 //import styles from './styles'
 
 const TakePhoto01 = ({navigation}) => {
-    
+    let plant = '0'
     return(
         
         <View style = { styles.container }>
@@ -50,7 +50,7 @@ const TakePhoto01 = ({navigation}) => {
             <View style= {styles.selecPlant}>
                 <Button  color='#16441D'
                 title='TRIGO'
-                onPress={ () => Alert.alert('Selected TRIGO')} 
+                onPress={ () => {   plant = '1', Alert.alert('${plant}') } } 
                 textcolor = 'black'
                 >
                 </Button>

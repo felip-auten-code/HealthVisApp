@@ -141,18 +141,18 @@ export const styles = StyleSheet.create({
     photoIcon: {
         position: 'absolute',
         top: 180,
-        left: win.width/5 -126.4/2,
+        left:  2.2*win.width/10 -126.4/2,
     },
     ListIcon: {
         position: 'absolute',
         top: 180 + 20,
-        left: 4*win.width/6 -126.4/2,
+        left: 7*win.width/10 -126.4/2,
         
     },
     DoencaIcon: {
         position: 'absolute',
         top: 180 + 20 + 180,
-        left: 4*win.width/6 -126.4/2,
+        left: 7*win.width/10 -126.4/2,
     },
     textPhoto1: {
         alignSelf: 'center',
