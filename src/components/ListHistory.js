@@ -24,7 +24,7 @@ const ListHistory = ({navigation}) => {
             {/* Home Icon */}
             <TouchableOpacity onPress={ () => navigation.navigate('MainPage')}
             style={styles.homeIcon}>
-                <Image source={require('../../icons/homeIcon.png')}/>
+                <Image style={styles.homeIcon2} source={require('../../icons/homeIcon.png')}/>
             </TouchableOpacity>
 
             <Image  style = {styles.icon3}   
@@ -40,7 +40,7 @@ const ListHistory = ({navigation}) => {
             {/* Options */}
             <TouchableOpacity onPress={ () => Alert.alert('See Options')} 
             style={styles.optIcon}>
-                <Image source={require('../../icons/OptionsIcon.png')}/>
+                <Image style={styles.optIcon2} source={require('../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
             
             <View style={{color: 'white',

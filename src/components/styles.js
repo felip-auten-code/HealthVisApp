@@ -121,12 +121,22 @@ export const styles = StyleSheet.create({
     homeIcon: {
         position: 'absolute',
         alignSelf: 'center',
-        top: 15,
+        top: 25,
+    },
+    homeIcon2: {
+        resizeMode: 'contain',
+        width: 35,
+        height: 35,
     },
     optIcon: {
         position: 'absolute',
-        top: 8,
-        left: 320,
+        top: 25,
+        left: 330,
+    },
+    optIcon2:{
+        resizeMode: 'contain',
+        height: 30,
+        width: 30,
     },
     photoIcon: {
         position: 'absolute',

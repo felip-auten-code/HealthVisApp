@@ -21,7 +21,7 @@ const MainPage = ({navigation}) => {
             {/* Home Icon */}
             <TouchableOpacity   onPress={ () => Alert.alert('Go to home')}
                                 style={styles.homeIcon}>
-                <Image source={require('../../icons/homeIcon.png')}/>
+                <Image style={styles.homeIcon2} source={require('../../icons/homeIcon.png')}/>
             </TouchableOpacity>
 
             <Image  style = {styles.icon3}   
@@ -37,7 +37,7 @@ const MainPage = ({navigation}) => {
             {/* Options */}
             <TouchableOpacity onPress={ () => setVisible(true)} 
             style={styles.optIcon}>
-                <Image source={require('../../icons/OptionsIcon.png')}/>
+                <Image  style={styles.optIcon2} source={require('../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
             
             {/* Botao Ver Camera */}
@@ -53,8 +53,8 @@ const MainPage = ({navigation}) => {
             </TouchableOpacity>
 
             {/* List Diseases */}
-            <TouchableOpacity onPress={ () => navigation.navigate('ListDiseases')} 
-            style={styles.DoencaIcon}>
+            <TouchableOpacity   onPress={ () => navigation.navigate('ListDiseases')} 
+                                style={styles.DoencaIcon}>
                 <Image source={require('../../icons/DoencaIcon.png')}/>
             </TouchableOpacity>
 
@@ -62,7 +62,7 @@ const MainPage = ({navigation}) => {
             <Modal  transparent={true} visible={visible} animationType="slide" >
                 <SafeAreaView style={{flex: 1}}  onTouchStart={() => setVisible(false)}>
                     <View style={{backgroundColor: 'white', top: 10, height:200, alignSelf:'center', width: win.width, alignItems: 'center'}}>
-                        <Text>
+                        <Text onPress={() => navigation.navigate('ListHistory')}>
                             HELLO
                         </Text>
                     </View>

@@ -8,8 +8,7 @@ import { styles } from './styles';
 //import { TextInput } from 'react-native-paper';
 //import styles from './styles'
 
-const Hub = ({navigation}) => {
-    
+const Hub = ({navigation}) => {    
     return(
         <View style = { styles.container }>
             <View style={styles.upperbar} >
@@ -22,7 +21,7 @@ const Hub = ({navigation}) => {
             {/* Home Icon */}
             <TouchableOpacity onPress={ () => navigation.navigate('MainPage')}
             style={styles.homeIcon}>
-                <Image source={require('../../icons/homeIcon.png')}/>
+                <Image style={styles.homeIcon2} source={require('../../icons/homeIcon.png')}/>
             </TouchableOpacity>
 
             <Image  style = {styles.icon3}   
@@ -38,12 +37,8 @@ const Hub = ({navigation}) => {
             {/* Options */}
             <TouchableOpacity onPress={ () => Alert.alert('See Options')} 
             style={styles.optIcon}>
-                <Image source={require('../../icons/OptionsIcon.png')}/>
+                <Image style={styles.optIcon2} source={require('../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
-            
-
-
-        
         </View>
         
     )
