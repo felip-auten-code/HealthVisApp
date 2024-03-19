@@ -1,8 +1,10 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import LogIn from './components/LogIn'
-import MainPage from './components/MainPage'
-import TakePhoto01 from './components/TakePhoto01'
-import ListHistory from './components/ListHistory'
+import LogIn from        './components/LogIn'
+import MainPage from     './components/MainPage'
+import TakePhoto01 from  './components/TakePhoto01'
+import TakePhoto02 from  './components/TakePhoto02'
+import TakePhoto03 from  './components/TakePhoto03'
+import ListHistory from  './components/ListHistory'
 import ListDiseases from './components/ListDiseases'
 
 const Stack = createNativeStackNavigator()
@@ -21,6 +23,14 @@ export default function Routes(){
             <Stack.Screen
             name = "TakePhoto01"
             component = {TakePhoto01}
+            />
+            <Stack.Screen
+            name = "TakePhoto02"
+            component = {TakePhoto02}
+            />
+            <Stack.Screen
+            name = "TakePhoto03"
+            component = {TakePhoto03}
             />
             <Stack.Screen
             name = "ListHistory"

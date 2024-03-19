@@ -8,7 +8,7 @@ import { styles } from './styles';
 //import { TextInput } from 'react-native-paper';
 //import styles from './styles'
 
-const TakePhoto03 = ({navigation}) => {    
+const TakePhoto03 = ({navigation, image}) => {    
     return(
         <View style = { styles.container }>
             <View style={styles.upperbar} >

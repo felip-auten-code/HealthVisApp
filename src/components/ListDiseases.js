@@ -8,6 +8,8 @@ import { styles } from './styles';
 //import { TextInput } from 'react-native-paper';
 //import styles from './styles'
 
+const plantTypes = ["TRIGO", "SOJA", "MILHO", "BATATA", "ALGODÃO"]
+
 const ListDiseases = ({navigation}) => {
     return(
         <View style = { styles.container }>
@@ -47,7 +49,7 @@ const ListDiseases = ({navigation}) => {
                           fontSize: 50,
                           backgroundColor: 'white',
                           borderTopLeftRadius: 30,
-                          borderTopRightRadius: 30}} >
+                          borderTopRightRadius: 30}}>
 
                 <Text style={{fontSize: 40, alignSelf: 'center'}}>
                     Qual a cultura?

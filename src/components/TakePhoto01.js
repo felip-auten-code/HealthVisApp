@@ -50,7 +50,8 @@ const TakePhoto01 = ({navigation}) => {
             <View style= {styles.selecPlant}>
                 <Button  color='#16441D'
                 title='TRIGO'
-                onPress={ () => {   plant = '1', Alert.alert('${plant}') } } 
+                onPress={ () => {   plant = '1', Alert.alert('${plant}') , 
+                                    navigation.navigate('TakePhoto02')} } 
                 textcolor = 'black'
                 >
                 </Button>
