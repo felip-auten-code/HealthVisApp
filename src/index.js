@@ -31,6 +31,7 @@ export default function Routes(){
             <Stack.Screen
             name = "TakePhoto03"
             component = {TakePhoto03}
+            //initialParams={result}
             />
             <Stack.Screen
             name = "ListHistory"

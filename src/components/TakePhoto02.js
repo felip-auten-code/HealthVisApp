@@ -11,7 +11,7 @@ import * as ImagePicker from "expo-image-picker"
 //import styles from './styles'
 
 
-
+let result = {}
 
 
 
@@ -40,7 +40,7 @@ const TakePhoto02 = ({navigation}) => {
         } else {
             try{
                 await ImagePicker.requestCameraPermissionsAsync()
-                let result = await ImagePicker.launchCameraAsync({
+                result = await ImagePicker.launchCameraAsync({
                     cameraType: ImagePicker.CameraType.back,
                     allowsEditing: true,
                     aspect: [1, 1],
@@ -89,14 +89,14 @@ const TakePhoto02 = ({navigation}) => {
 
             <View style={{width: 300}}>
                 <Button title="Use Camera" color= 'black'
-                        onPress={ () => {uploadPhoto() , navigation.navigate('TakePhoto03')}}
+                        onPress={ () => {uploadPhoto() , navigation.navigate('TakePhoto03', {result})}}
                        ></Button>
                 
                 <View style={{margin: 15}}></View>
 
                 <Button title="Gallery" color= 'black'
-                        onPress={() => uploadPhoto("gallery") }
-                       ></Button>
+                        onPress={() => {uploadPhoto("gallery") , navigation.navigate('TakePhoto03') }}
+                        ></Button>
             </View>
         </View>
         
