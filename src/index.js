@@ -4,6 +4,7 @@ import MainPage from     './components/MainPage'
 import TakePhoto01 from  './components/TakePhoto01'
 import TakePhoto02 from  './components/TakePhoto02'
 import TakePhoto03 from  './components/TakePhoto03'
+import PredictionPage from './components/PredictionPage'
 import ListHistory from  './components/ListHistory'
 import ListDiseases from './components/ListDiseases'
 
@@ -31,6 +32,11 @@ export default function Routes(){
             <Stack.Screen
             name = "TakePhoto03"
             component = {TakePhoto03}
+            //initialParams={result}
+            />
+            <Stack.Screen
+            name = "PredictionPage"
+            component = {PredictionPage}
             //initialParams={result}
             />
             <Stack.Screen

@@ -60,6 +60,42 @@ const ListDiseases = ({navigation}) => {
                                 alignSelf: 'center',
                                 marginTop: 5}}>
                 </View>
+
+                <TouchableOpacity style={{ marginLeft: 20, marginTop: 20, flexDirection: 'row'}}>
+                    <Image  source={require('../../icons/milho.png')} 
+                            style={{resizeMode: 'contain',
+                                    width: 100,
+                                    height: 100}}></Image>
+                    <Text style={{fontSize: 26, top: 30, left: 40}}> Milho </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ marginLeft: 20, marginTop: 20, flexDirection: 'row'}}>
+                    <Image  source={require('../../icons/batata.png')} 
+                            style={{resizeMode: 'contain',
+                                    width: 100,
+                                    height: 100}}></Image>
+                    <Text style={{fontSize: 26, top: 30, left: 40}}> Batata </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ marginLeft: 20, marginTop: 20, flexDirection: 'row'}}>
+                    <Image  source={require('../../icons/soja.png')} 
+                            style={{resizeMode: 'contain',
+                                    width: 100,
+                                    height: 100}}></Image>
+                    <Text style={{fontSize: 26, top: 30, left: 40}}> Soja </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ marginLeft: 20, marginTop: 20, flexDirection: 'row'}}>
+                    <Image  source={require('../../icons/trigo.png')} 
+                            style={{resizeMode: 'contain',
+                                    width: 100,
+                                    height: 100}}></Image>
+                    <Text style={{fontSize: 26, top: 30, left: 40}}> Trigo </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ marginLeft: 20, marginTop: 20, marginBottom: 20, flexDirection: 'row'}}>
+                    <Image  source={require('../../icons/algodao.png')} 
+                            style={{resizeMode: 'contain',
+                                    width: 100,
+                                    height: 100}}></Image>
+                    <Text style={{fontSize: 26, top: 30, left: 40}}> Algodão </Text>
+                </TouchableOpacity>
             </ScrollView>
 
         
