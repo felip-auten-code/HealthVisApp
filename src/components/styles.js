@@ -90,14 +90,14 @@ export const styles = StyleSheet.create({
     buttonEntry: {
         top: 520,
         width: 100,
-        height: 280,
+        height: 6*win.height/8,
         left: 200,
         position: 'absolute',
     },
     buttonInsert: {
         top: 520,
         width: 100,
-        height: 280,
+        height: 6*win.height/8,
         left: 60,
         position: 'absolute',
     },

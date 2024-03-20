@@ -1,19 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { useRoute } from "@react-navigation/native"
-import { TouchableOpacity, SafeAreaView , ScrollView,  Keyboard, TouchableWithoutFeedback, Platform, StyleSheet, Text, View , Image, Dimensions, TextInput , KeyboardAvoidingView, Alert} from 'react-native';
+import { useRoute , useNavigation } from "@react-navigation/native"
+import { Button, TouchableOpacity, SafeAreaView , ScrollView,  Keyboard, TouchableWithoutFeedback, Platform, StyleSheet, Text, View , Image, Dimensions, TextInput , KeyboardAvoidingView, Alert} from 'react-native';
 import React, { Children } from 'react'
 //import { Box, Button, Input } from 'native-base'
 import { styles } from './styles';
+
 
 //import { Form } from 'react-native-bootstrap/Form'
 //import { TextInput } from 'react-native-paper';
 //import styles from './styles'
 
-const TakePhoto03 = ({navigation}) => {    
-    const route = useRoute() 
-    img = route.params.result
-    //img = navigation.getParam(result)
-    //img = img.assets[0].uri
+const win = Dimensions.get('window')
+
+const TakePhoto03 = ({navigation, route}) => {    
+    img = route.params.selectedImage
+    plant = route.params.plantType
+    useNavigation()
+    console.log(img, "in 03")
+    
     return(
         <View style = { styles.container }>
             <View style={styles.upperbar} >
@@ -45,9 +49,38 @@ const TakePhoto03 = ({navigation}) => {
                 <Image style={styles.optIcon2} source={require('../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
 
-            <Image source={img.uri} style={{alignSelf: 'center', position: 'absolute', top: 0}}>
+            <View style={{  
+                            position: 'absolute', 
+                            backgroundColor: 'transparent', 
+                            width: 300, 
+                            height: 100,
+                            top: win.height/1.7}}>
 
-            </Image>
+                <Button title='UTILIZAR ESTA FOTO' color="black" onPress={() => {}}>
+                </Button>
+                <View style={{margin: 15}}></View>
+                <Button title='ESCOLHER OUTRA FOTO' color="black"
+                        onPress={() => {navigation.navigate('TakePhoto02', {plantType: plant})}}>
+                </Button>
+            </View>
+
+            {/* FOR IMAGE */}
+            <View style={{  flex: 1, 
+                            position: 'absolute', 
+                            backgroundColor: 'white', 
+                            width: 300, 
+                            height: 300,
+                            top: win.height/6,
+                            borderRadius: 10}}>
+
+            </View>
+            
+            <View style={{ position: 'absolute', top: 150, alignContent: 'center'}}>
+                {img && <Image  style={{ alignSelf: 'center', position: 'absolute', width: 290, height: 270,}} 
+                                source={{uri: img}}/>}
+            </View>
+
+            
         </View>
         
     )

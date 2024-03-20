@@ -9,7 +9,7 @@ import { styles } from './styles';
 //import { TextInput } from 'react-native-paper';
 //import styles from './styles'
 
-const TakePhoto01 = ({navigation}) => {
+const TakePhoto01 = ({navigation, route}) => {
     let plant = '0'
     return(
         
@@ -51,7 +51,7 @@ const TakePhoto01 = ({navigation}) => {
                 <Button  color='#16441D'
                 title='TRIGO'
                 onPress={ () => {   plant = '1', Alert.alert('${plant}') , 
-                                    navigation.navigate('TakePhoto02')} } 
+                                    navigation.navigate('TakePhoto02',  {plantType: plant})} } 
                 textcolor = 'black'
                 >
                 </Button>
@@ -60,7 +60,9 @@ const TakePhoto01 = ({navigation}) => {
                 
                 <Button  color='#16441D'
                 title='SOJA'
-                onPress={ () => Alert.alert('Selected SOJA')} 
+                onPress={  () => {  Alert.alert('Selected SOJA'),
+                                    plant = '2',
+                                    navigation.navigate('TakePhoto02',  {plantType: plant})}} 
                 textcolor = 'black'
                 >
                 </Button>
@@ -69,35 +71,35 @@ const TakePhoto01 = ({navigation}) => {
                 
                 <Button  color='#16441D'
                 title='MILHO'
-                onPress={ () => Alert.alert('Selected MILHO')} 
-                textcolor = 'black'
-                >
+                onPress={ () => {   Alert.alert('Selected MILHO'),
+                                    plant = '3',
+                                    navigation.navigate('TakePhoto02', {plantType: plant})}} 
+                textcolor = 'black'>
                 </Button>
 
                 <View style={{margin: 15}}></View>
                 
                 <Button  color='#16441D'
                 title='BATATA'
-                onPress={ () => Alert.alert('Selected BATATA')} 
-                textcolor = 'black'
-                >
+                onPress={ () => {   Alert.alert('Selected BATATA'),
+                                    plant = '4',
+                                    navigation.navigate('TakePhoto02', {plantType: plant})}} 
+                textcolor = 'black'>
                 </Button>
 
                 <View style={{margin: 15}}></View>
                 
                 <Button  color='#16441D'
                 title='ALGODÃO'
-                onPress={ () => Alert.alert('Selected ALGODÃO')} 
+                onPress={ () => {   Alert.alert('Selected ALGODÃO'),
+                                    plant = '5',
+                                    navigation.navigate('TakePhoto02', {plantType: plant})}} 
                 textcolor = 'black'
                 >
                 </Button>
-                
-              
+                              
             </View>
 
-
-
-        
         </View>
         
     )
