@@ -12,6 +12,8 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 0,
         justifyContent: 'center',
+        position: 'relative',
+        resizeMode: 'contain'
     },
     containner2: {
         flex: 1,
@@ -64,7 +66,7 @@ export const styles = StyleSheet.create({
         height: 420,
     },
     inputUsername: {
-        top: 50,
+        top: 80,
         margin: 20,
         borderWidth: 1,
         padding: 10,
@@ -91,7 +93,7 @@ export const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     inputPass: {
-        top: 10 ,
+        top: 30 ,
         margin: 40,
         borderWidth: 1,
         padding: 10,
