@@ -4,7 +4,7 @@ import React, { Children } from 'react'
 //import { Box, Input } from 'native-base'
 //import { Form } from 'react-native-bootstrap/Form'
 //import { TextInput } from 'react-native-paper';
-import {styles} from './styles'
+import {styles} from '../Styles/styles'
 //import { position } from 'native-base/lib/typescript/theme/styled-system';
 
 const win = Dimensions.get('window')
@@ -15,14 +15,15 @@ const LogIn = ({navigation}) => {
     return(
 
         <KeyboardAvoidingView 
-        behavior= 'padding'
-        style={styles.container}
-        keyboardVerticalOffset={50}>
-            <View style={ [styles.container]}>
+            behavior= 'padding'
+            style={ styles.container }
+            keyboardVerticalOffset= {150} 
+            vertical >
+            <View style={ styles.containner2 }>
                 <StatusBar style = "auto" />
                 
                 <Image  style = {styles.icon2}   
-                        source = {require("../../icons/LeafLogIn.png")}>
+                        source = {require("../../../icons/LeafLogIn.png")}>
                             
                 </Image>
 
@@ -31,26 +32,11 @@ const LogIn = ({navigation}) => {
                         Health Vision
                     </Text>
                 </View>
-                <Image  style = {styles.icon}   
-                        source = {require("../../icons/iconInit.png")}>
+                <Image  style = { styles.icon }   
+                        source = {require("../../../icons/iconInit.png")}>
                             
                 </Image>
             
-                <View keyboardVerticalOffset={80} vertical style={{flex: 1, position: 'absolute', alignItems: 'center'}}>
-                    <TextInput  style = { styles.input }
-                                onChangeText = {onChangeText}
-                                value = {text}
-                                placeholder = "Username"     
-                                showSoftInputOnFocus  
-                    />
-                    <TextInput  style = { styles.inputPass }
-                                onChangeText = {onChangeText2}
-                                value = {textPass}
-                                placeholder = "Password"    
-                                secureTextEntry = {true}   
-                                textContentType = {"password"}  
-                    ></TextInput>
-                </View>
 
                 <View style={styles.buttonEntry}>
                     <Button color={'#19BA50'}
@@ -62,7 +48,8 @@ const LogIn = ({navigation}) => {
                 <View style={styles.buttonInsert}>
                     <Button 
                         title="Cadastrar"
-                        onPress={() => Alert.alert('Fazer Tela de Cadastro')}
+                        onPress={() => {Alert.alert('Fazer Tela de Cadastro'), 
+                                            navigation.navigate('Register')}}
                     />
                 </View>
 
@@ -78,6 +65,31 @@ const LogIn = ({navigation}) => {
                         }}>Ou entre por meio de {"\n"} outra plataforma</Text>
                 </View>
            </View>
+
+           <View   keyboardVerticalOffset={80} vertical 
+                        style={{flex: 1, 
+                                position: 'absolute', 
+                                alignSelf: 'center', 
+                                top: win.height/2.5,
+                                height: 200,
+                                width: 300,
+                                backgroundColor:  'black'}}>
+
+                <TextInput  style = { styles.inputUsername }
+                            onChangeText = {onChangeText}
+                            value = {text}
+                            placeholder = "Username"     
+                            showSoftInputOnFocus  
+                />
+                <TextInput  style = { styles.inputPass }
+                            onChangeText = {onChangeText2}
+                            value = {textPass}
+                            placeholder = "Password"    
+                            secureTextEntry = {true}   
+                            textContentType = {"password"}  
+                            showSoftInputOnFocus  
+                ></TextInput>
+            </View>
         </KeyboardAvoidingView>
 
     )

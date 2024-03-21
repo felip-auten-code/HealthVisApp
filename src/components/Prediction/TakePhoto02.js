@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, TouchableOpacity, SafeAreaView , ScrollView,  Keyboard, TouchableWithoutFeedback, Platform, StyleSheet, Text, View , Image, Dimensions, TextInput , KeyboardAvoidingView, Alert} from 'react-native';
 import React, { Children , useState} from 'react'
 //import { Box, Button, Input } from 'native-base'
-import { styles } from './styles';
+import { styles } from '../Styles/styles';
 import * as ImagePicker from "expo-image-picker"
 import { useNavigation } from '@react-navigation/native';
 
@@ -74,23 +74,23 @@ const TakePhoto02 = ({navigation, route}) => {
             {/* Home Icon */}
             <TouchableOpacity onPress={ () => navigation.navigate('MainPage')}
             style={styles.homeIcon}>
-                <Image style={styles.homeIcon2} source={require('../../icons/homeIcon.png')}/>
+                <Image style={styles.homeIcon2} source={require('../../../icons/homeIcon.png')}/>
             </TouchableOpacity>
 
             <Image  style = {styles.icon2}   
-                    source = {require("../../icons/LeafLogIn.png")}>        
+                    source = {require("../../../icons/LeafLogIn.png")}>        
             </Image>
 
             {/* User Information */}
             <TouchableOpacity onPress={ () => Alert.alert('See user information')} 
             style={styles.userLoc}>
-                <Image source={require('../../icons/User.png')}/>
+                <Image source={require('../../../icons/User.png')}/>
             </TouchableOpacity>
 
             {/* Options */}
             <TouchableOpacity onPress={ () => Alert.alert('See Options')} 
             style={styles.optIcon}>
-                <Image style={styles.optIcon2} source={require('../../icons/OptionsIcon.png')}/>
+                <Image style={styles.optIcon2} source={require('../../../icons/OptionsIcon.png')}/>
             </TouchableOpacity>
 
             <View style={{ position: 'absolute', width: 300, top: 150}}>

@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { TouchableOpacity, SafeAreaView , ScrollView,  Keyboard, TouchableWithoutFeedback, Platform, StyleSheet, Text, View , Image, Dimensions, TextInput , KeyboardAvoidingView, Alert} from 'react-native';
 import React, { Children } from 'react'
 //import { Box, Button, Input } from 'native-base'
-import { styles } from './styles';
+import { styles } from './Styles/styles';
 
 //import { Form } from 'react-native-bootstrap/Form'
 //import { TextInput } from 'react-native-paper';
