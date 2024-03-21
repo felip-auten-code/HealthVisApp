@@ -68,7 +68,7 @@ const TakePhoto02 = ({navigation, route}) => {
             <Image  style = {styles.icon2}   
                     source = {require("../../../icons/LeafLogIn.png")}>        
             </Image>
-            
+
             <View style={styles.upperbar} >
             </View>
 
@@ -103,7 +103,6 @@ const TakePhoto02 = ({navigation, route}) => {
                 >
                 </Button>
                 
-
                 <View style={{margin: 15}}></View>
 
                 <Button title="Gallery" color= 'black'
@@ -135,7 +134,6 @@ const TakePhoto02 = ({navigation, route}) => {
 
                 </Button>
             </View>
-            
             
         </SafeAreaView>
     )
