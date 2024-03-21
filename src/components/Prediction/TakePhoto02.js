@@ -64,8 +64,14 @@ const TakePhoto02 = ({navigation, route}) => {
     
     return(
         <SafeAreaView style = { styles.container }>
+            
+            <Image  style = {styles.icon2}   
+                    source = {require("../../../icons/LeafLogIn.png")}>        
+            </Image>
+            
             <View style={styles.upperbar} >
             </View>
+
 
             {/* <View style={styles.homeIcon}>
                 <Image source={require('../../icons/homeIcon.png')}/>
@@ -77,9 +83,7 @@ const TakePhoto02 = ({navigation, route}) => {
                 <Image style={styles.homeIcon2} source={require('../../../icons/homeIcon.png')}/>
             </TouchableOpacity>
 
-            <Image  style = {styles.icon2}   
-                    source = {require("../../../icons/LeafLogIn.png")}>        
-            </Image>
+            
 
             {/* User Information */}
             <TouchableOpacity onPress={ () => Alert.alert('See user information')} 

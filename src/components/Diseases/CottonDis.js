@@ -42,7 +42,7 @@ const CottonDis = ({navigation}) => {
         
             <ScrollView style={styles.listingBackground}>
                 <Text style={{fontSize: 40, alignSelf: 'center'}}>
-                    Trigo
+                    Algodão
                 </Text>
                 {/* THE LINE */}
                 <View style={{  width: 300,

@@ -16,7 +16,7 @@ const Register = ({navigation}) => {
     const [textName, onChangeName] = React.useState('')
     return(
 
-        <ScrollView style={ [{flex: 1}]}>
+        <ScrollView style={ [{flex: 1 , backgroundColor: "#3C8547"}]}>
             <KeyboardAvoidingView 
                 behavior= 'padding'
                 style={[styles.container, {height: win.height}]}

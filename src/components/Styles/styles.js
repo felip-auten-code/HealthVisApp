@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
     },
     icon2: {
         alignSelf: 'center',
-        top: 5,
+        top: 100,
         objectFit: "cover",
         position: "absolute",
         resizeMode: 'center',
