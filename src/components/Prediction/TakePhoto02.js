@@ -14,7 +14,6 @@ const win = Dimensions.get('window')
 
 let result = {}
 
-
 const TakePhoto02 = ({navigation, route}) => {  
     useNavigation()
     const [image, setImage] = useState(null) 
