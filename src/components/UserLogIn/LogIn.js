@@ -15,7 +15,7 @@ const LogIn = ({navigation}) => {
     const [textPass, onChangeText2] = React.useState('')
     return(
 
-        <ScrollView style={ {flex:1} }>
+        <ScrollView style={ {flex:1, backgroundColor: '#3C8547'} }>
             <KeyboardAvoidingView 
                 behavior= 'padding'
                 style={ [styles.container, {height: win.height}] }
@@ -66,7 +66,8 @@ const LogIn = ({navigation}) => {
                         ></TextInput>
                     </ScrollView>
                 
-
+                    
+                    {/* BUTTON ENTRY */}
                     <View style={styles.buttonEntry}>
                         <Button color={'#19BA50'}
                             title="Entrar"
@@ -74,11 +75,11 @@ const LogIn = ({navigation}) => {
                         />
                     </View>
 
+                    {/* BUTTON REGISTER */}
                     <View style={styles.buttonInsert}>
                         <Button 
                             title="Cadastrar"
-                            onPress={() => {Alert.alert('Fazer Tela de Cadastro'), 
-                                                navigation.navigate('Register')}}
+                            onPress={() => {  navigation.navigate('Register')  }  }
                         />
                     </View>
 
