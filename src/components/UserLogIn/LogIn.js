@@ -36,8 +36,7 @@ const LogIn = ({navigation}) => {
                         </Text>
                     </View>
                     <Image  style = { styles.icon }   
-                            source = {require("../../../icons/iconInit.png")}>
-                                
+                            source = {require("../../../icons/iconInit.png")}>      
                     </Image>
 
                     <ScrollView vertical keyboardVerticalOffset={100}  

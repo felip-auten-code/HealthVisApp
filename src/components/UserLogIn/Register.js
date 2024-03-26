@@ -45,31 +45,59 @@ const Register = ({navigation}) => {
                                             top: 150,
                                             borderRadius: 10,
                                             width: win.width-40,
-                                            height: 300}}>
+                                            height: 400}}>
                     
+
                         <TextInput  style = { styles.registerField }
                                         onChangeText = {onChangeText}
                                         value = {text}
-                                        placeholder = "Username"     
-                                        showSoftInputOnFocus  
+                                        placeholder = "Username/Nome de Usuário"     
+                                        showSoftInputOnFocus
                         />
+
+                        <Text style={{left: -20,marginTop: -10 ,fontSize: 12, alignSelf: 'center', color: 'white'}}>
+                            Nome de usuário deve conter {"\n"}no mínimo 6 caracteres
+                        </Text>
+
                         <TextInput  style = { styles.registerField }
                                         onChangeText = {onChangeText2}
                                         value = {textPass}
-                                        placeholder = "Password"    
+                                        placeholder = "Password/Senha"    
                                         secureTextEntry = {true}   
                                         textContentType = {"password"}  
                         />
+
+                        <Text style={{left: -35, marginTop: -10 ,fontSize: 12, alignSelf: 'center', color: 'white'}}>
+                            Senha deve conter {"\n"}no mínimo 8 caracteres
+                        </Text>
+
+                        <TextInput  style = { styles.registerField }
+                                        onChangeText = {onChangeText2}
+                                        value = {textPass}
+                                        placeholder = "Confirm/Confirmar Senha"    
+                                        secureTextEntry = {true}   
+                                        textContentType = {"password"}  
+                        />
+
+                        <Text style={{left: -25,marginTop: -10 ,fontSize: 12, alignSelf: 'center', color: 'white'}}>
+                            Deve ser idêntica a senha {"\n"}digitada no campo anterior
+                        </Text>
+
                         <TextInput  style = { styles.registerField }
                                         onChangeText = {onChangeEmail}
                                         value = {textEmail}
                                         placeholder = "e-mail"    
                                         textContentType = {'emailAddress'}  
                         />
+
+                        <Text style={{left: -48,marginTop: -10 ,fontSize: 12, alignSelf: 'center', color: 'white'}}>
+                            Email deve existir
+                        </Text>
+
                         <TextInput  style = { styles.registerField }
                                         onChangeText = {onChangeName}
                                         value = {textName}
-                                        placeholder = "Name"    
+                                        placeholder = "Name/Nome"    
 
                         />
                     </ScrollView>
@@ -80,13 +108,13 @@ const Register = ({navigation}) => {
             </KeyboardAvoidingView>
             <View style={{  backgroundColor: 'transparent', 
                                     position: 'relative',
-                                    top: -270,
+                                    top: -220,
                                     width: 300,
-                                    height: 200,
+                                    height: 100,
                                     alignSelf: 'center'
                                     //alignItems: 'center']
                                 }}>
-                <View style={{marginTop: 20}}></View>
+                <View style={{marginTop: 60}}></View>
                 <Button title='Cadastrar' color={'black'} 
                         onPress={() => { navigation.navigate('LogIn') }}>
 

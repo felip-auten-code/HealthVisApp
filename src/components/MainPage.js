@@ -60,12 +60,20 @@ const MainPage = ({navigation}) => {
 
         
             <Modal  transparent={true} visible={visible} animationType="slide" >
-                <SafeAreaView style={{}}  onTouchStart={() => setVisible(false)}>
+                <SafeAreaView style={{flex: 1}}  onTouchStart={() => setVisible(false)}>
                     <View style={{backgroundColor: 'black', top: 10, height:200, alignSelf:'center', width: win.width, alignItems: 'center'}}>
-                        <Text   onPress={() => navigation.navigate('ListHistory')}
-                                style ={{color: 'white'}}>
-                            HELLO
-                        </Text>
+                        
+                        <TouchableOpacity   style={{width: 300, height:50 , 
+                                            backgroundColor: 'red'}} 
+                                            onPress={() => navigation.navigate('ListHistory')}>
+
+                            
+                            <Text 
+                                    style ={{color: 'white', fontSize: 40}}>
+                                HELLO
+                            </Text>
+                        </TouchableOpacity>
+
                     </View>
                 </SafeAreaView>
             </Modal>

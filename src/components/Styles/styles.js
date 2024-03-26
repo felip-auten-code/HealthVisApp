@@ -207,7 +207,7 @@ export const styles = StyleSheet.create({
     },
     registerField: {
         top: 0,
-        margin: 12,
+        margin: 8,
         borderWidth: 1,
         padding: 10,
         color: 'black',
